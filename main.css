@@ -60,6 +60,10 @@ body {
 }
 .hero-center p {
   text-align: center;
+  animation: slideFromLeft 5s ease-in-out infinite;
+}
+.hero-text {
+  animation: slideFromTop 5s ease-in-out infinite;
 }
 /* button */
 .hero-btn {
@@ -74,26 +78,36 @@ body {
   color: #fff;
   /* cursor: pointer; */
   /* cursor: col-resize; */
+  animation: slideFromBottom 5s ease-in-out infinite;
 }
 /* animation */
-.hero-text {
-  margin-top: -600px;
-  animation: animate-up 3s 1 forwards;
-}
-.hero-btn {
-  margin-top: 630px;
-  /* animation: animate-down 3s 1 forwards; */
-}
-
-@keyframes animate-up {
-  /* 25% {
-    
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
   }
-  50% {
-  }
-  75% {
-  } */
   100% {
-    transform: translateY(600px);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideFromBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
